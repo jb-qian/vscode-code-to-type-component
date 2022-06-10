@@ -1,0 +1,81 @@
+{
+	"name": "vscode-code-to-type",
+	"description": "一个可以把 Js 代码快速生成 Ts Type 类型的插件",
+	"version": "1.0.5",
+	"publisher": "songqian",
+    "icon": "images/icon.png",
+	"keywords": [
+        "js2ts",
+        "js",
+        "javascript",
+		"ts",
+		"typescript",
+		"ts type"
+	],
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:code-to-type.copy"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"title": "code-to-type",
+				"command": "code-to-type.copy"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "code-to-type.copy",
+				"key": "shift+cmd+v"
+			}
+		],
+		"configuration": {
+			"title": "code-to-type 配置",
+			"properties": {
+				"code-to-type.default.spaces": {
+					"type": "number",
+					"default": 4,
+					"description": "空格缩进的数量"
+				},
+                "code-to-type.default.export": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "带 export 导出"
+                }
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run package",
+		"build": "vsce package",
+		"compile": "webpack",
+		"watch": "webpack --watch",
+		"test": "ts-node ./src/test/index.ts",
+		"package": "webpack --mode production --devtool hidden-source-map",
+		"lint": "eslint src --ext ts"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.2.2",
+		"@types/node": "14.x",
+		"@types/vscode": "^1.0.0",
+		"@typescript-eslint/eslint-plugin": "^4.26.0",
+		"@typescript-eslint/parser": "^4.26.0",
+		"eslint": "^7.27.0",
+		"glob": "^7.1.7",
+		"mocha": "^8.4.0",
+		"ts-loader": "^9.2.2",
+		"typescript": "^4.3.5",
+		"webpack": "^5.38.1",
+		"webpack-cli": "^4.7.0"
+	},
+	"dependencies": {
+		"@ks/code-to-type": "^0.0.8"
+	}
+}
