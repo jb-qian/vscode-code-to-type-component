@@ -1,7 +1,7 @@
 {
 	"name": "vscode-code-to-type",
-	"description": "一个可以把 Js 代码快速生成 Ts Type 类型的插件",
-	"version": "1.0.5",
+	"description": "一个可以把 JS/JSON 代码快速生成 TS Type 类型的插件",
+	"version": "1.0.6",
 	"publisher": "songqian",
     "icon": "images/icon.png",
 	"keywords": [
@@ -76,6 +76,6 @@
 		"webpack-cli": "^4.7.0"
 	},
 	"dependencies": {
-		"@ks/code-to-type": "^0.0.8"
+		"@ks/code-to-type": "^0.1.0"
 	}
 }
