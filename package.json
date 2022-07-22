@@ -1,7 +1,7 @@
 {
 	"name": "vscode-code-to-type",
 	"description": "一个可以把 JS/JSON 代码快速生成 TS Type 类型的插件",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"publisher": "songqian",
     "icon": "images/icon.png",
 	"keywords": [
